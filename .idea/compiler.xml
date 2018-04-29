@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="jdbc-app" />
         <module name="jdbc-intro" />
+        <module name="jpa-hibernate-intro" />
       </profile>
     </annotationProcessing>
   </component>
