@@ -58,11 +58,11 @@ public class BaseEmployeeDao implements EmployeeDao {
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(
-                    "insert into EMPLOYEE(name, surname, salary, hire_date) values (?, ?, ?, ?)");
+                    "INSERT INTO EMPLOYEE(name, surname, hire_date, salary) VALUES (?, ?, ?, ?)");
             preparedStatement.setString(1, employee.getName());
             preparedStatement.setString(2, employee.getSurname());
-            preparedStatement.setDouble(3, employee.getSalary());
-            preparedStatement.setDate(4, new java.sql.Date(employee.getHireDate().getTime()));
+            preparedStatement.setDate(3, new java.sql.Date(employee.getHireDate().getTime()));
+            preparedStatement.setDouble(4, employee.getSalary());
             preparedStatement.execute();
             return true;
         } catch (SQLException e) {
